@@ -10,18 +10,22 @@ Homework reflection 1
 (B) Using radius_neighbors to pick all matches X = 0 within a distance of 0.2 of each X = 1.
 
 Invent your own type of matching similar to 1 and 2 (or look one up on the internet), which has a different way to pick the matches in X = 0.  Clearly explain the approach you invented or found.
+#knn, for every one 1, we find the nearest 3 zeroes. The effect would be calculated by comparing treated to neighbors' mean. 
 
 Homework reflection 2
-
 1. Invent an example situation that would use fixed effects.
+#A study for whether remote working increases productivity, collect data over years from one employee which would be fixed, we collect different variables that would showcase the productivity then run an ols model to see the effect of working remote. 
 
 2. Write a Python program that performs a bootstrap simulation to find the variance in the mean of the Pareto distribution when different samples are taken.  Explain what you had to do for this.  As you make the full sample size bigger (for the same distribution), what happens to the variance of the mean of the samples?  Does it stay about the same, get smaller, or get bigger?
+#A sample gets set up for a Pareto, then bootstrapping takes areas of this full dataset and samples chunks of it with replacement datasets. Depending on the trees, this gets done many times then the result shows the variance of the bootstrap means. The more samples there are, the mean decreases because they balance the mean to focus more on the data that matters the most.
 
 Homework reflection 3
 
 1. In the event study in Coding Quiz 3, how would we go about testing for a change in the second derivative as well?
+#we would test to see if there is a curvature or bend after the first slope for after event through a quadratic term in diff-diff equation.
 
 2. Create your own scenario that illustrates differences-in-differences. Describe the story behind the data and show whether there is a nonzero treatment effect.
+#A university vs B university adapting a tool. A adapts it where B does not. We measure avg exam scores before and after for both. Then we would subtract post tool and pre tool per variable and then subtract the results from A vs B as a whole. This shows us the treatment effect in a scenario of whether the tool helped vs not implemented, making it a nonzero treatment effect.
 
 Homework reflection 4
 
