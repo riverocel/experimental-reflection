@@ -4,6 +4,7 @@ submission if it is longer than that.
 Homework reflection 1
 
 1. In Coding Quiz 1, you are asked to find the distance of the farthest match in a set.  Is this farthest match distance too far to be a meaningful match?  How can you decide this?
+# the difference between them is nearly double of matched group for the treated group. We can interpret that as a meaningful match where treatment effect had a positive effect on outcome
 
 2. In Coding Quiz 1, there are two approaches to matching: 
 (A) Picking the best match X = 0 corresponding to each X = 1 using Z values.

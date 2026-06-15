@@ -6,22 +6,52 @@ Homework Reflection 5
 1. Draw a diagram for the following negative feedback loop:
 
 Sweating causes body temperature to decrease.  High body temperature causes sweating.
+#High Body Temperature ──(+)-> Sweating
+Sweating ──(–)-> Body Temperature
 
 A negative feedback loop means that one thing increases another while the second thing decreases the first.
-
 Remember that we are using directed acyclic graphs where two things cannot directly cause each other.
 
 2. Describe an example of a positive feedback loop.  This means that one things increases another while the second things also increases the first.
+#both affects effect each other as an outcome positive or negative. Like when births depend on pregnancy number and pregnancy number effects the amount of births.
 
 3. Draw a diagram for the following situation:
 
 Lightning storms frighten away deer and bears, decreasing their population, and cause flowers to grow, increasing their population.
 Bears eat deer, decreasing their population.
 Deer eat flowers, decreasing their population.
+#Lightning Storms ──(–)-> Deer Population
+Lightning Storms ──(–)-> Bear Population
+Lightning Storms ──(+)-> Flower Population
+
+Bear Population ──(–)-> Deer Population
+Deer Population ──(–)-> Flower Population
 
 Write a dataset that simulates this situation.  (Show the code.) Include noise / randomness in all cases.
 
+
+np.random.seed(42)
+n = 200
+
+lightning_storms = np.random.normal(loc=5, scale=2, size=n)
+bears = 80 - 5 * lightning_storms + np.random.normal(0, 8, n)
+deer = 120 - 4 * lightning_storms - 0.6 * bears + np.random.normal(0, 10, n)
+flowers = 100 + 6 * lightning_storms - 0.7 * deer + np.random.normal(0, 12, n)
+bears = np.maximum(bears, 0)
+deer = np.maximum(deer, 0)
+flowers = np.maximum(flowers, 0)
+
+df = pd.DataFrame({
+    "lightning_storms": lightning_storms,
+    "bears": bears,
+    "deer": deer,
+    "flowers": flowers
+})
+
+print(df.head())
+
 Identify a backdoor path with one or more confounders for the relationship between deer and flowers.
+#lightning effects the deer eating flowers
 
 4. Draw a diagram for a situation of your own invention.  The diagram should include at least four nodes, one confounder, and one collider.  Be sure that it is acyclic (no loops).  Which node would say is most like a treatment (X)?  Which is most like an outcome (Y)?
 
