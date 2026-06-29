@@ -6,7 +6,7 @@ Homework Reflection 5
 1. Draw a diagram for the following negative feedback loop:
 
 Sweating causes body temperature to decrease.  High body temperature causes sweating.
-#High Body Temperature ──(+)-> Sweating
+### High Body Temperature ──(+)-> Sweating
 Sweating ──(–)-> Body Temperature
 
 A negative feedback loop means that one thing increases another while the second thing decreases the first.
@@ -20,7 +20,7 @@ Remember that we are using directed acyclic graphs where two things cannot direc
 Lightning storms frighten away deer and bears, decreasing their population, and cause flowers to grow, increasing their population.
 Bears eat deer, decreasing their population.
 Deer eat flowers, decreasing their population.
-#Lightning Storms ──(–)-> Deer Population
+## Lightning Storms ──(–)-> Deer Population
 Lightning Storms ──(–)-> Bear Population
 Lightning Storms ──(+)-> Flower Population
 
@@ -51,7 +51,7 @@ df = pd.DataFrame({
 print(df.head())
 
 Identify a backdoor path with one or more confounders for the relationship between deer and flowers.
-#lightning effects the deer eating flowers
+# lightning effects the deer eating flowers
 
 4. Draw a diagram for a situation of your own invention.  The diagram should include at least four nodes, one confounder, and one collider.  Be sure that it is acyclic (no loops).  Which node would say is most like a treatment (X)?  Which is most like an outcome (Y)?
 
